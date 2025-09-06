@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carp Furniture - Modern Furniture & Lighting</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Carp Furniture - Modern Furniture & Lighting">
+    <meta property="og:description" content="Your source for modern furniture and lighting">
+    <meta property="og:image" content="logo.jpeg">
+    <meta property="og:url" content="https://carpfamfurniture.netlify.app/">
+    <meta property="og:type" content="website">
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            // Update OG meta tags based on item parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const itemId = urlParams.get('item');
+            if (itemId) {
+                // Assuming images array is available or fetch item details
+                // For demo, update meta tags
+                const itemName = `Item ${itemId}`; // Replace with actual name
+                const itemPrice = `$300`; // Replace with actual price
+                const itemImage = `item.webp`; // Replace with actual image
+                const itemDesc = `Check out this ${itemName} for ${itemPrice}`;
+
+                document.querySelector('meta[property="og:title"]').setAttribute('content', `Carp Furniture - ${itemName}`);
+                document.querySelector('meta[property="og:description"]').setAttribute('content', itemDesc);
+                document.querySelector('meta[property="og:image"]').setAttribute('content', itemImage);
+                document.querySelector('meta[property="og:url"]').setAttribute('content', window.location.href);
+            }
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    console.log('User location:', lat, lon);
+
+                    // Reverse geocoding to get place name
+                    fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            const place = data.display_name || 'Unknown location';
+                            document.getElementById('location').textContent = `Location: ${place}`;
+                        })
+                        .catch(error => {
+                            console.error('Error getting place name:', error);
+                            document.getElementById('location').textContent = 'Location: Unable to determine';
+                        });
+                }, function(error) {
+                    console.error('Error getting location:', error);
+                    document.getElementById('location').textContent = 'Location: Permission denied or unavailable';
+                });
+            } else {
+                console.log('Geolocation is not supported by this browser.');
+                document.getElementById('location').textContent = 'Location: Geolocation not supported';
+            }
+        });
+    </script>
+
+</head>
+<body>
+    <header>
+        <h1>Carp Furniture</h1>
+        <p>Your source for modern furniture and lighting <br><span class="material-icons">phone</span> <a href="tel:0752118324">0752118324</a> <a class="link" href="https://wa.me/+256744759181" target="_blank"><i class="fa fa-whatsapp"></i></a></p>
+
+        <nav>
+            <img class="logo" src="logo.jpeg"/>
+            <form name="form" id="search">
+            <input type="search" class="search" placeholder="search....."/>
+        </form>
+        <span class="material-icons" id="menu">menu</span>
+        </nav>
+        </header>
+    <main>
+        <p id="status1"></p>
+        <section id="gallery">
+            <!-----gallery-->
+        </section>
+   </main>
+   <section id="other-products">
+       <h2>Other Products</h2>
+       <button id="view-other-products">View Other Products List</button>
+       <div id="other-products-container"></div>
+   </section>
+ 
+    <footer>
+        <h3>Follow Us</h3><br>
+        <section class="icons">
+            <a class="link" href="https://wa.me/+256744759181" target="_blank"><span class="fa fa-whatsapp"></span></a>
+            <a class="link" href="https://facebook.com/yourpage" target="_blank"><span class="fa fa-facebook"></span></a>
+            <a class="link" href="https://youtube.com/yourchannel" target="_blank"><span class="fa fa-youtube"></span></a>
+            <a class="link" href="https://twitter.com/yourhandle" target="_blank"><span class="fa fa-twitter"></span></a>
+        </section><br><br>
+        <h4>Subscribe to our Newsletter</h4>
+        <form
+  action="https://formspree.io/f/xgvlrezj"
+  class="fs-form"
+  target="_top"
+  id="newsletter"
+  method="POST">
+  <div class="fs-field">
+    <input
+      class="fs-input"
+      id="full-name"
+      name="full-name"
+      placeholder="Enter your name (optional)"
+    />
+  </div>
+  <div class="fs-field">
+    
+    <input
+      class="fs-input"
+      id="email-address"
+      name="email-address"
+      placeholder="Enter your email address"
+      required
+    />
+  </div>
+  <div class="fs-checkbox-field">
+    <div class="fs-checkbox-wrapper">
+      <input
+        aria-describedby="newsletter-consent-description"
+        class="fs-checkbox"
+        id="newsletter-consent"
+        name="newsletter-consent"
+        required
+        type="checkbox"
+        value="yes"
+      />
+    </div>
+    <div>
+      <label class="fs-label" for="newsletter-consent" style="color: white;">
+        Consent to Receive Newsletters
+      </label>
+      <p class="fs-description" id="newsletter-consent-description" style="color: blue;">
+        I agree to receive newsletters from carp furniture.
+      </p>
+    </div>
+  </div>
+  <div class="fs-checkbox-field">
+    <div class="fs-checkbox-wrapper">
+      <input
+        aria-describedby="privacy-policy-agreement-description"
+        class="fs-checkbox"
+        id="privacy-policy-agreement"
+        name="privacy-policy-agreement"
+        required
+        type="checkbox"
+        value="yes"
+      />
+    </div>
+    <div>
+      <label class="fs-label" for="privacy-policy-agreement" style="color: white;">
+        I Agree to the Privacy Policy
+      </label>
+      <p class="fs-description" id="privacy-policy-agreement-description" style="color: blue;">
+        I have read and agree to the Privacy Policy.
+      </p>
+    </div>
+  </div>
+  <div class="fs-button-group">
+    <button class="fs-button" type="submit">Subscribe</button>
+  </div>
+</form><br>
+        <p>&copy; 2025 Carp Furniture. All rights reserved.</p>
+        <p id="location">Location: Loading...</p>
+        <p>Last updated: 2025</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
