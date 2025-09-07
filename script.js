@@ -51,7 +51,7 @@ function shareImage(id) {
 }
 
 const otherProducts = [
-    { name: "saachi standing fun black", id: 101, price: "SHs.70000", img: "fan 1.webp", desc: "Saachi standing fan (black).3ft tall and pocket friendly.2months warranty" },
+    { name: "saachi standing fun black", id: 101, price: "SHs.70000", img: "fan 1.webp", desc: "" },
     { name: "", id: 102, price: "", img: "", desc: "" },
     { name: "", id: 103, price: "", img: "", desc: "" },
     { name: "", id: 104, price: "", img: "", desc: "" }
