@@ -34,7 +34,7 @@ images.forEach(image => {
     const likeBtn = document.createElement('button');
     likeBtn.className = 'btn like-btn';
     likeBtn.setAttribute('data-id', image.id);
-    likeBtn.innerHTML = '<i class="fa fa-heart"></i> <span class="like-count">0</span>';
+    likeBtn.innerHTML = '<i class="fa fa-heart"></i> <span class="like-count">26</span>';
 
     const shareBtn = document.createElement('button');
     shareBtn.className = 'btn share-btn';
@@ -241,4 +241,5 @@ fetch('https://ipapi.co/json/')
         const locationElem = document.getElementById('location');
         locationElem.textContent = 'Location: Unknown';
     });
+
 
