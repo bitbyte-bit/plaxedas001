@@ -1,9 +1,10 @@
 const gallery = document.getElementById('gallery');
 
 const images = [
+    { name: "7 seater sofa blue", id: 00009921, price:"$570", img:"sofa 8.jpeg" },
     { name: "two seater sofa black", id: 1, price: "$122", img: "sofa1.jpeg" },
     { name: "5 seater sofa brown", id: 2, price: "$370", img: "sofa2.jpeg" },
-    { name: "5 seater sofa blue", id: 3, price: "$450", img: "sofa3.jpeg" },
+    { name: "5 seater sofa blue", id: 3, price: "$450", img: "sofa3.jpeg" }, 
     { name: "5 seater sofa blue and hard wooden table", id: 4, price: "$800", img: "sofa4.jpeg" },
     { name: "5 seater sofa brown", id: 5, price: "$500", img: "sofa5.jpeg" },
     { name: "5 seater sofa blue", id: 6, price: "$550", img: "sofa 7.jpeg"},
@@ -34,7 +35,7 @@ images.forEach(image => {
     const likeBtn = document.createElement('button');
     likeBtn.className = 'btn like-btn';
     likeBtn.setAttribute('data-id', image.id);
-    likeBtn.innerHTML = '<i class="fa fa-heart"></i> <span class="like-count">26</span>';
+    likeBtn.innerHTML = '<i class="fa fa-heart"></i> <span class="like-count">0</span>';
 
     const shareBtn = document.createElement('button');
     shareBtn.className = 'btn share-btn';
@@ -241,5 +242,6 @@ fetch('https://ipapi.co/json/')
         const locationElem = document.getElementById('location');
         locationElem.textContent = 'Location: Unknown';
     });
+
 
 
