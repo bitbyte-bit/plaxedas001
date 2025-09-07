@@ -53,6 +53,7 @@ function shareImage(id) {
 const otherProducts = [
     
     { name: "saachi standing fun black", id: 101, price: "SHs.70000", img: "fan 1.webp", desc: "" },
+    { name: "", id:000987921, price:"", img:"" }
 
 ];
 // Populate other products
