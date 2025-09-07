@@ -37,6 +37,7 @@ header input {
     border:0;
     border-radius: 5px;
     margin-top:5px ;
+    color:green;
 }
 @media (width>500px) {
     header input {
@@ -892,6 +893,7 @@ fieldset {
     gap:10px;
     padding: 20px;
 }
+
 
 
 
