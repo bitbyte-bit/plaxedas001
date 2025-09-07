@@ -83,11 +83,8 @@ otherProducts.forEach(product => {
 
     const imageActions = document.createElement('div');
     imageActions.className = 'image-actions';
+    imageActions.style.justifyContent = 'spaceBetween';
 
-    const likeBtn = document.createElement('button');
-    likeBtn.className = 'btn like-btn';
-    likeBtn.setAttribute('data-id', product.id);
-    likeBtn.innerHTML = '<i class="fa fa-heart"></i> <span class="like-count">0</span>';
 
     const shareBtn = document.createElement('button');
     shareBtn.className = 'btn share-btn';
@@ -99,7 +96,6 @@ otherProducts.forEach(product => {
     negotiateBtn.setAttribute('data-id', product.id);
     negotiateBtn.innerHTML = '<i class="fa fa-whatsapp"></i> Negotiate';
 
-    imageActions.appendChild(likeBtn);
     imageActions.appendChild(shareBtn);
     imageActions.appendChild(negotiateBtn);
 
@@ -143,4 +139,5 @@ document.body.addEventListener('click', function(e) {
         window.open(whatsappUrl, '_blank');
     }
 });
+
 
