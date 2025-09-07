@@ -67,6 +67,7 @@ otherProducts.forEach(product => {
     const img = document.createElement('img');
     img.src = product.img;
     img.alt = product.name;
+    img.style.height = "maxContent";
 
     const itemName = document.createElement('h3');
     itemName.textContent = product.name;
@@ -140,6 +141,7 @@ document.body.addEventListener('click', function(e) {
         window.open(whatsappUrl, '_blank');
     }
 });
+
 
 
 
