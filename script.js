@@ -61,6 +61,7 @@ const otherContainer = document.getElementById('other-products-container');
 otherProducts.forEach(product => {
     const productItem = document.createElement('div');
     productItem.className = 'image-item';
+    productItem.style.minWidth = "320px";
     productItem.setAttribute('data-id', product.id);
 
     const img = document.createElement('img');
@@ -139,5 +140,6 @@ document.body.addEventListener('click', function(e) {
         window.open(whatsappUrl, '_blank');
     }
 });
+
 
 
