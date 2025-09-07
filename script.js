@@ -51,10 +51,9 @@ function shareImage(id) {
 }
 
 const otherProducts = [
+    
     { name: "saachi standing fun black", id: 101, price: "SHs.70000", img: "fan 1.webp", desc: "" },
-    { name: "", id: 102, price: "", img: "", desc: "" },
-    { name: "", id: 103, price: "", img: "", desc: "" },
-    { name: "", id: 104, price: "", img: "", desc: "" }
+
 ];
 // Populate other products
 const otherContainer = document.getElementById('other-products-container');
@@ -141,6 +140,7 @@ document.body.addEventListener('click', function(e) {
         window.open(whatsappUrl, '_blank');
     }
 });
+
 
 
 
