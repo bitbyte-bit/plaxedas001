@@ -6,6 +6,7 @@ const images = [
     { name: "5 seater sofa blue", id: 3, price: "$450", img: "sofa3.jpeg" },
     { name: "5 seater sofa blue and hard wooden table", id: 4, price: "$800", img: "sofa4.jpeg" },
     { name: "5 seater sofa brown", id: 5, price: "$500", img: "sofa5.jpeg" },
+    { name: "5 seater sofa blue", id: 6, price: "$550", img: "sofa 7.jpeg"},
    
 ];
 
@@ -240,3 +241,4 @@ fetch('https://ipapi.co/json/')
         const locationElem = document.getElementById('location');
         locationElem.textContent = 'Location: Unknown';
     });
+
