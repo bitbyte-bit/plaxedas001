@@ -1,7 +1,7 @@
 const gallery = document.getElementById('gallery');
 
 const images = [
-    { name: "2 sater sofa grey", id:00987667, price:"SHs.620000", img:"2 seater grey.jpeg" },
+    { name: "2 sater sofa grey", id:00987667, price:"SHs.620000", img:"2 seater grey.jpg" },
     { name: "7 seater sofa blue", id: 00009921, price:"SHs.1,300,000", img:"sofa 8.jpeg" },
     { name: "two seater sofa black", id: 1, price: "SHs.350,000", img: "sofa1.jpeg" },
     { name: "5 seater sofa brown", id: 2, price: "SHs.1,450,000", img: "sofa2.jpeg" },
@@ -243,6 +243,7 @@ fetch('https://ipapi.co/json/')
         const locationElem = document.getElementById('location');
         locationElem.textContent = 'Location: Unknown';
     });
+
 
 
 
