@@ -1,6 +1,7 @@
 const gallery = document.getElementById('gallery');
 
 const images = [
+    { name: " SAMSUNG A04 ", id:0009998884755, price:"SHs.255,000", img:"phone.jpg" },
     { name: "2 sater sofa grey", id:00987667, price:"SHs.620000", img:"2 seater grey.jpg" },
     { name: "7 seater sofa blue", id: 00009921, price:"SHs.1,300,000", img:"sofa 8.jpeg" },
     { name: "two seater sofa black", id: 1, price: "SHs.350,000", img: "sofa1.jpeg" },
@@ -243,6 +244,7 @@ fetch('https://ipapi.co/json/')
         const locationElem = document.getElementById('location');
         locationElem.textContent = 'Location: Unknown';
     });
+
 
 
 
